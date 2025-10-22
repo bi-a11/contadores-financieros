@@ -1,50 +1,307 @@
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GMP Contadores</title>
-    <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="overlay"></div>
+   <!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- AOS Animations -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <header>
-    <nav class="navbar">
-        <div class="logo">GOMP Contadores</div>
-        <ul class="nav-links">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#">Servicios</a></li>
-        </ul>
-    </nav>
-    </header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- Fondo de video e imágenes en toda la pantalla -->
+<div class="video-background">
+  <video src="logos/WhatsApp Video 2025-10-20 at 10.43.42 PM.mp4" autoplay muted loop class="bg-video active"></video>
+  <video src="logos/WhatsApp Video 2025-10-20 at 10.45.32 PM.mp4" autoplay muted loop class="bg-video"></video>
+  <video src="logos/WhatsApp Video 2025-10-20 at 10.45.32 PM.mp4" autoplay muted loop class="bg-video"></video>
+  <img src="logos/bascula normal.jpeg" alt="Fondo 2" class="bg-video">
 
+</div>
 
-    <main class="form-container">
-        <img src="logos/logo.jpg" alt=" GOMP Contadores" class="form-logo">
-        <h1>¿En qué te podemos ayudar?</h1>
-        <p>Déjanos tus datos y nos pondremos en contacto contigo.</p>
+<!-- Barra de contacto superior -->
+<div class="top-bar">
+  <span class="contact-item">
+    <img src="logos/icono de gmail.png" alt="Correo" class="icon-small">
+    GOMP.CONTADORES@OUTLOOK.COM
+  </span>
+</div>
 
-        <form>
-        <input type="text" placeholder="Nombre completo" required>
-        <input type="email" placeholder="Correo electrónico" required>
-        <input type="tel" placeholder="Teléfono" required>
-        <textarea placeholder="¿Cuál es tu problema o necesidad?" rows="4" required></textarea>
-        <button type="submit">Enviar</button>
-        </form>
-    </main>
-    <section id="nosotros" class="nosotros-section">
-    <h2>Nosotros</h2>
-    <div class="cards-container">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+<!-- Menú de navegación -->
+<header class="navbar">
+  <div class="logo">
+    <img src="logos/blanco png.png" class="form-logo3" alt="Logo">
+  </div>
+  <ul class="nav-links">
+    <li><a href="#inicio">INICIO</a></li>
+    <li><a href="#nosotros">QUIÉNES SOMOS</a></li>
+    <li><a href="#servicios">¿En qué te podemos ayudar?</a></li>
+   <li><a href="#contacto">CONTACTO</a></li>
+  </ul>
+</header>
+  <!-- Formulario -->
+ <section id="inicio" class="hero-section">
+  <img src="logos/color png2.png" alt="GOMP Contadores Logo" class="hero-logo">
+  
+  <h1>Expertos en contabilidad, fiscal y asesoría empresarial</h1>
+  
+  <p>En G.O.M.P. CONTADORES ayudamos a tu empresa a cumplir, crecer y tomar mejores decisiones. <strong>¡Contamos con experiencia, ética y compromiso!</strong></p>
+  
+  <a href="#contacto" class="btn-cta">Solicita una asesoría</a>
+</section>
+
+ <section id="nosotros" class="nosotros-section">
+    <h1>G.O.M.P CONTADORES</h1>
+    <h1>
+       Somos una organización especializada en brindar servicios 
+       y asesoría en materia contable, fiscal, administrativa, legal, 
+       tributación e implantación de negocios de diversos sectores económicos.
+      </h1>
+      <h1>SOMOS ASESORES DEDICADOS, QUE ENTIENDEN TUS PROBLEMAS.</h1>
+
+    <h1>
+      Contamos con la experiencia para brindarles servicios especializados en materia contable, fiscal y asesoría en negocios.
+    </h1> 
+ <section>
+  <div class="cards-container">
+
+     <div class="card card-orange" data-aos="zoom-in-up" data-aos-delay="500" onclick="toggleSubcards(this)">
+  <i data-lucide="briefcase"></i>
+      <h3>MISIÓN</h3>
+      <p class="card-content">
+        Proporcionar servicios contables y fiscales de alta calidad, con un enfoque en la satisfacción del cliente y el cumplimiento de las normas y regulaciones.
+      </p>
     </div>
-    </section>
 
-    </body>
-    </html>
+     <div class="card card-orange" data-aos="zoom-in-up" data-aos-delay="500" onclick="toggleSubcards(this)">
+  <i data-lucide="briefcase"></i>
+      <h3>VISIÓN</h3>
+      <p class="card-content">
+        Ser el despacho contable líder en la región, reconocido por su excelencia en la prestación de servicios contables y fiscales.
+      </p>
+    </div>
+
+    <div class="card card-orange" data-aos="zoom-in-up" data-aos-delay="500" onclick="toggleSubcards(this)">
+  <i data-lucide="briefcase"></i>
+      <h3>OBJETIVO</h3>
+      <p class="card-content">
+        Mantener un alto nivel de satisfacción del cliente, superando sus expectativas y necesidades.
+      </p>
+    </div>
+
+     <div class="card card-orange" data-aos="zoom-in-up" data-aos-delay="500" onclick="toggleSubcards(this)">
+  <i data-lucide="briefcase"></i>
+      <h3>VALORES</h3>
+      <p class="card-content">
+        Ética empresarial, integridad, profesionalismo, responsabilidad, confidencialidad, respeto, compromiso y transparencia.
+      </p>
+    </div>
+
+      <div class="card card-orange" data-aos="zoom-in-up" data-aos-delay="500" onclick="toggleSubcards(this)">
+  <i data-lucide="briefcase"></i>
+      <h3>BENEFICIOS DE CONTRATARNOS</h3>
+      <p class="card-content">
+        ✅ Cumplimiento puntual--Evitas multas y recargos.<br>
+        ✅ Seguridad en tus declaraciones--Datos protegidos y cálculos revisados por expertos.<br>
+        ✅ Ahorro de tiempo--Nos encargamos de todo el proceso ante el SAT.<br>
+        ✅ Asesoría clara y confiable--Te explicamos lo necesario, sin tecnicismos.<br>
+        ✅ Soporte continuo todo el año--Atención durante todo el año fiscal.
+      </p>
+    </div>
+  <div class="card card-orange" data-aos="zoom-in-up" data-aos-delay="500" onclick="openModal('SERVICIOS DE CONTABILIDAD', `
+Con Consultoría Contable y Fiscal, finalmente puedes comenzar a concentrarte en hacer crecer tu propio negocio mientras tienes la tranquilidad de que todos tus asuntos contables están en orden.<br><br>
+Estos informes son esenciales para la toma de decisiones por parte de propietarios, inversionistas, bancos y entidades reguladoras.<br><br>
+Cumplimiento de normas contables locales o internacionales (como las NIIF/IFRS).<br>
+Apoyo en auditorías y presentación de informes financieros ante terceros.<br>
+Mantén una imagen clara, confiable y ordenada de la situación financiera de la empresa, permitiendo evaluar su estabilidad, rentabilidad y capacidad de crecimiento.
+  `)">
+  <i data-lucide="briefcase"></i>
+    <h3>SERVICIOS DE CONTABILIDAD</h3>
+    <p class="card-content">Gestión completa de registros contables, reportes financieros y cumplimiento normativo.</p>
+  </div>
+
+  <div class="card card-orange" data-aos="fade-up" onclick="openModal('SERVICIOS DE ASESORÍA FISCAL', `
+Ofrecemos asesoría fiscal para empresas y personas físicas, ayudándolos a cumplir con sus obligaciones fiscales y a minimizar sus impuestos.<br><br>
+Nuestro equipo de expertos fiscales se encarga de la planificación fiscal y la preparación de declaraciones de impuestos.<br><br>
+
+<strong>Planeación Fiscal</strong><br>
+Estrategias legales para reducir impuestos.<br>
+Análisis de esquemas fiscales más convenientes.<br>
+Reestructuración empresarial para eficiencia fiscal.<br><br>
+
+<strong>Cumplimiento de Obligaciones Tributarias</strong><br>
+Cálculo y presentación de declaraciones mensuales y anuales (IVA, ISR, retenciones, etc.).<br>
+Actualización de obligaciones fiscales ante la autoridad.<br>
+Gestión de facturación electrónica y CFDI 4.0.<br><br>
+
+<strong>Actualización Normativa</strong><br>
+Información sobre cambios en leyes fiscales, reformas y criterios del fisco.<br>
+Adaptación de procesos internos a nuevas regulaciones.<br><br>
+
+<strong>Asesoría para Nuevos Negocios</strong><br>
+Registro fiscal inicial (RFC).<br>
+Elección del régimen fiscal adecuado.<br>
+Configuración de obligaciones del negocio.<br><br>
+
+Aseguramos que el contribuyente cumpla con la ley, pague solo lo justo y aproveche todos los beneficios fiscales disponibles dentro del marco legal.
+  `)">
+    <h3>SERVICIOS DE ASESORÍA FISCAL</h3>
+    <p>Planeación fiscal, cumplimiento tributario y estrategias de optimización legal.</p>
+  </div>
+
+  <div class="card card-orange" data-aos="fade-up" onclick="openModal('SERVICIOS DE AUDITORÍA', `
+Auditorías financieras y operativas para evaluar la situación financiera y el cumplimiento de normas y regulaciones.<br><br>
+<strong>Objetivo:</strong><br>
+Aportar transparencia, confianza y seguridad a la información financiera y operativa.<br>
+Detectar errores, fraudes o riesgos ocultos.<br>
+Fortalecer la toma de decisiones y el cumplimiento normativo.<br><br>
+<strong>Auditoría Financiera:</strong><br>
+Revisión de estados financieros (balance, resultados, flujo de efectivo).<br>
+Verificación del cumplimiento de normas contables (NIIF/IFRS o locales).<br>
+Opinión profesional sobre la razonabilidad de la información financiera.<br><br>
+<strong>Auditoría Fiscal:</strong><br>
+Revisión del cumplimiento de obligaciones tributarias.<br>
+Evaluación de pagos de impuestos, retenciones y declaraciones fiscales.<br>
+Prevención de sanciones o multas por errores ante el fisco.<br><br>
+<strong>Auditoría Interna:</strong><br>
+Evaluación de procesos internos, controles y gestión de riesgos.<br>
+Recomendaciones para mejorar eficiencia, seguridad y cumplimiento.<br><br>
+<strong>Auditoría Operativa:</strong><br>
+Análisis del desempeño de áreas o procesos específicos.<br>
+Optimización de operaciones y toma de decisiones estratégicas.<br><br>
+<strong>Auditoría de Cumplimiento:</strong><br>
+Verificación del cumplimiento de leyes, políticas internas y normativas externas (laborales, ambientales, de calidad, etc.).
+  `)">
+    <h3>SERVICIOS DE AUDITORÍA</h3>
+    <p>Evaluación integral de cumplimiento financiero, fiscal y operativo.</p>
+  </div>
+
+  <div class="card card-orange" data-aos="fade-up" onclick="openModal('ENVÍO DE DECLARACIONES DE IMPUESTOS ANTE EL SAT', `
+<strong>¿Qué incluye nuestro servicio?</strong><br><br>
+1. Declaraciones Mensuales:<br>
+Cálculo y envío de ISR, IVA y retenciones.<br><br>
+2. Declaración Anual:<br>
+Elaboración y presentación de la declaración anual.<br>
+Personas físicas (abril). Personas morales (marzo).<br>
+Revisión de deducciones autorizadas.<br>
+Determinación de saldo a favor o a pagar.<br><br>
+<strong>¿A quién va dirigido este servicio?</strong><br>
+Personas físicas con actividad empresarial o profesional.<br>
+Emprendedores, arrendadores, PyMEs y comerciantes.<br>
+Conductores de plataformas digitales, entre otros.
+  `)">
+    <h3>ENVÍO DE DECLARACIONES</h3>
+    <p>Declaraciones mensuales y anuales ante el SAT con cumplimiento total.</p>
+  </div>
+
+  <div class="card card-orange" data-aos="fade-up" onclick="openModal('ATENCIÓN A REQUERIMIENTOS', `
+¿Recibiste un requerimiento del SAT?<br>
+Confiar en especialistas hace la diferencia. Nuestro equipo de expertos se encargará de resolverlo rápidamente y con exactitud.<br><br>
+<strong>Revisamos:</strong><br>
+- Declaraciones omitidas.<br>
+- Cartas invitación.<br>
+- Diferencias entre facturas y declaraciones.<br>
+- Pagos incompletos o atrasados.<br>
+- Citatorios y suspensión del CSD.<br><br>
+<strong>Etapas:</strong><br>
+1️⃣ Análisis del requerimiento.<br>
+2️⃣ Explicación clara al cliente.<br>
+3️⃣ Revisión de tu situación fiscal.<br>
+4️⃣ Elaboración de respuesta.<br>
+5️⃣ Seguimiento hasta el cierre.<br><br>
+⚠️ ¡No ignores un requerimiento del SAT!
+  `)">
+    <h3>ATENCIÓN A REQUERIMIENTOS</h3>
+    <p>Resolución profesional de requerimientos y notificaciones del SAT.</p>
+  </div>
+
+  <div class="card card-orange" data-aos="fade-up" onclick="openModal('RECUPERACIÓN DE SALDOS A FAVOR', `
+Las leyes fiscales permiten la devolución de ISR de hasta cinco años atrás.<br>
+Te ayudamos a recuperar tu dinero ante el SAT de forma legal, segura y sin complicaciones.<br><br>
+<strong>Incluye:</strong><br>
+1️⃣ Análisis del saldo a favor.<br>
+2️⃣ Verificación de años y montos.<br>
+3️⃣ Seguimiento hasta devolución.<br>
+4️⃣ Solicitudes de corrección o reconsideración.
+  `)">
+    <h3>RECUPERACIÓN DE SALDOS A FAVOR</h3>
+    <p>Trámite completo de devolución de ISR o IVA ante el SAT.</p>
+  </div>
+
+  <div class="card card-orange" data-aos="fade-up" onclick="openModal('REGISTROS ANTE IMSS, INFONAVIT, REPSE, ETC.', `
+Gestionamos el registro completo de tu empresa ante IMSS, INFONAVIT, REPSE, STPS e ISSSTE.<br><br>
+<strong>Incluye:</strong><br>
+- Diagnóstico inicial de obligaciones.<br>
+- Preparación y entrega de documentación.<br>
+- Seguimiento y renovación.<br>
+- Asesoría laboral y fiscal.<br><br>
+Cumple con la ley y protege a tus colaboradores.
+  `)">
+    <h3>REGISTROS ANTE IMSS / INFONAVIT / REPSE</h3>
+    <p>Tramitación integral ante instituciones laborales y de seguridad social.</p>
+  </div>
+
+  <div class="card card-orange" data-aos="fade-up" onclick="openModal('FACTURACIÓN ELECTRÓNICA', `
+Emitimos y enviamos tus facturas CFDI 4.0 de forma legal y sin errores.<br><br>
+<strong>Incluye:</strong><br>
+✅ Emisión de facturas de ingresos, egresos, pagos y nómina.<br>
+✅ Timbrado y validación ante el SAT.<br>
+✅ Envío automático al correo del cliente.<br><br>
+<strong>Complementos:</strong><br>
+- REP, Carta Porte, Nómina y Comercio Exterior.<br><br>
+✅ Reportes mensuales y descarga masiva de XML/PDF.<br>
+✅ Cumplimiento con CFDI 4.0 y atención personalizada.
+  `)">
+    <h3>FACTURACIÓN ELECTRÓNICA</h3>
+    <p>Emisión, validación y administración de CFDI conforme a la normativa actual.</p>
+  </div>
+</section>
+
+<!-- MODAL GLOBAL -->
+<div id="definitionModal" class="modal-overlay">
+  <div class="modal-card">
+    <button class="close-btn" onclick="closeModal()">✕</button>
+    <h2 id="modalTitle"></h2>
+    <p id="modalContent"></p>
+  </div>
+</div>
+
+    <!-- Puedes seguir con el resto igual, cambiando los efectos o delays -->
+  </div>
+</section>
+
+</main>
+
+ <main id="servicios" class="form-container">
+  <h1>LLENA TODOS LOS CAMPOS</h1>
+   <form>
+      <input type="text" placeholder="Nombre completo" required />
+      <input type="email" placeholder="Correo electrónico" required />
+      <input type="tel" placeholder="Teléfono" required />
+      <textarea placeholder="¿Cuál es tu problema o necesidad?" rows="4" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <!-- Sección de Contacto -->
+<section id="contacto" class="contacto-section">
+  <h2>Contáctanos Directamente</h2>
+  <ul class="contact-list">
+    <li><strong>CP. FERNANDO G.</strong> 5549245698</li>
+    <li><strong>CP. ALEJANDRO O.</strong> 5573281372</li>
+    <li><strong>CP. MIGUEL M.</strong> 5613019784</li>
+    <li><strong>CP. BRAYAN P.</strong> 5511243389</li>
+  </ul>
+</section>
+
+  <script src="script.js"></script>
+  <script>
+  AOS.init({
+    duration: 900,     // Duración de la animación (ms)
+    once: true,        // Solo se anima una vez
+    easing: 'ease-out' // Movimiento suave
+  });
+</script>
+
+</body>
+</html>
