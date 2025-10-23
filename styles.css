@@ -364,19 +364,32 @@ form button:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.45); /* 🔹 reduce el tamaño al 70% */
+  transform: translate(-50%, -50%) scale(0.45);
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   opacity: 0;
-  transition: opacity 2s ease-in-out;
+  transition: opacity 10s ease-in-out; /* 🔹 transición de 10 segundos */
 }
 
 .bg-video.active {
   opacity: 1;
 }
+/* 🔹 Este video llenará el espacio negro (a la derecha o izquierda) */
+.side-video {
+  position: absolute;
+  top: 50%;
+  left: 85%; /* Mueve más a la derecha */
+  transform: translate(-50%, -50%) scale(0.75);
+  min-width: 50%;
+  min-height: 100%;
+  object-fit: cover;
+  opacity: 1; /* Siempre visible */
+  z-index: -1;
+}
+
 /* === Subcard general === */
 .subcard {
   background-color: rgba(0, 0, 0, 0.85);
@@ -623,4 +636,17 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
+}
+
+
+#contenido-principal.fade-out {
+  opacity: 0;
+}
+#contenido-principal {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#contenido-principal.fade-out {
+  opacity: 0;
 }

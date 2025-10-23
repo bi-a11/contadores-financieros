@@ -97,6 +97,50 @@ function closeModal() {
 document.getElementById("definitionModal").addEventListener("click", function(e) {
   if (e.target === this) closeModal();
 });
+async function cargarVista(nombreVista) {
+  const contenedor = document.getElementById('contenido-principal');
+  try {
+    const respuesta = await fetch(`vistas/${nombreVista}.html`);
+    if (!respuesta.ok) throw new Error("Error al cargar la vista");
+    const html = await respuesta.text();
+    contenedor.innerHTML = html;
+    AOS.refresh(); // Reinicia animaciones AOS
+    window.scrollTo(0, 0); // Sube al inicio cada vez
+  } catch (error) {
+    contenedor.innerHTML = "<p>Error al cargar la vista.</p>";
+  }
+}
+async function cargarVista(nombreVista) {
+  const contenedor = document.getElementById('contenido-principal');
+  contenedor.classList.add('fade-out');
 
+  setTimeout(async () => {
+    const respuesta = await fetch(`vistas/${nombreVista}.html`);
+    const html = await respuesta.text();
+    contenedor.innerHTML = html;
+    contenedor.classList.remove('fade-out');
+    AOS.init();
+    lucide.createIcons();
+  }, 300);
+}
 
+// Cargar vista por defecto al abrir la página
+window.onload = () => cargarVista('inicio');
+// Selecciona todos los videos del fondo
+const videos = document.querySelectorAll('.bg-video');
+let currentIndex = 0;
 
+// Cambia de video cada cierto tiempo
+function cambiarVideo() {
+  // Oculta el video actual
+  videos[currentIndex].classList.remove('active');
+
+  // Mueve al siguiente índice
+  currentIndex = (currentIndex + 1) % videos.length;
+
+  // Muestra el siguiente video
+  videos[currentIndex].classList.add('active');
+}
+
+// Cambia de video cada 15 segundos (puedes ajustar el tiempo)
+setInterval(cambiarVideo, 15000); // 15 segundos entre cambios

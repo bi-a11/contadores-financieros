@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- AOS Animations -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<!-- Fondo de video e imágenes en toda la pantalla -->
+<div class="video-background">
+  <video src="logos/WhatsApp Video 2025-10-20 at 10.43.42 PM.mp4" autoplay muted loop class="bg-video.active"></video>
+  <video src="logos/WhatsApp Video 2025-10-20 at 10.45.32 PM.mp4" autoplay muted loop class="bg-video.active"></video>
+  <video src="logos/WhatsApp Video 2025-10-20 at 10.43.42 PM.mp4" autoplay muted loop class="side-video"></video>
+</div>
+
+
+<!-- Barra de contacto superior -->
+<div class="top-bar">
+  <span class="contact-item">
+    <img src="logos/icono de gmail.png" alt="Correo" class="icon-small">
+    GOMP.CONTADORES@OUTLOOK.COM
+  </span>
+</div>
+
+ <!-- Menú de navegación -->
+<header class="navbar">
+  <div class="logo">
+    <img src="logos/blanco png.png" class="form-logo3" alt="Logo">
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">INICIO</a></li>
+    <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
+    <li><a href="servicios.html">¿En qué te podemos ayudar?</a></li>
+   <li><a href="contacto.html">CONTACTO</a></li>
+  </ul>
+</header>
+
+  <!-- Sección de contacto -->
+  <section class="contacto-section" data-aos="fade-up">
+    <h1>Contáctanos Directamente</h1>
+
+    
+    <ul class="contact-list">
+      <li><strong>CP. FERNANDO G.</strong> 5549245698</li>
+      <li><strong>CP. ALEJANDRO O.</strong> 5573281372</li>
+      <li><strong>CP. MIGUEL M.</strong> 5613019784</li>
+      <li><strong>CP. BRAYAN P.</strong> 5511243389</li>
+    </ul>
+  </section>
+
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<style>
+  /* ====== SECCIÓN DE CONTACTO CENTRADA ====== */
+.contacto-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 60px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 600px;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.contacto-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #73ff00;
+}
+
+.contact-list {
+  list-style: none;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+}
+
+strong {
+  color: #ffffff;
+}
+/* ====== SECCIÓN DE CONTACTO FLOTANTE ====== */
+.contacto-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 60px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 600px;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+
+  /* 🔹 Animación de movimiento */
+  animation: movimientoLento 10s infinite alternate ease-in-out;
+}
+
+/* ====== ANIMACIÓN ====== */
+@keyframes movimientoLento {
+  0% {
+    transform: translate(-50%, -50%) translate(0px, 0px);
+  }
+  25% {
+    transform: translate(-50%, -50%) translate(40px, -30px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(-30px, 40px);
+  }
+  75% {
+    transform: translate(-50%, -50%) translate(50px, 30px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(-40px, -20px);
+  }
+}
+
+.contacto-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00c4ff;
+}
+
+.contact-list {
+  list-style: none;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+}
+
+</style>
