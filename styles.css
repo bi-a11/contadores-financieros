@@ -34,43 +34,97 @@ html {
   margin-right: 8px;
 }
 
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
 /* Barra de navegación */
 .navbar {
   position: fixed;
-  top: 35px; /* Se ajusta por la barra superior */
+  top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   z-index: 9999;
   background-color: #000;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  height: 70px;
+  align-items: center; /* centra el contenido verticalmente */
+
+  /* 🔹 Parámetros que puedes modificar manualmente */
+  height: 125px;        /* ajusta la altura total de la barra */
+  padding-left: 3rem;   /* espacio a la izquierda */
+  padding-right: 3rem;  /* espacio a la derecha */
+  padding-top: 0.5rem;  /* espacio arriba del logo/texto */
+  padding-bottom: 0.5rem; /* espacio abajo del logo/texto */
+
   border-bottom: 1px solid #ffc107;
 }
 
+/* Contenedor del logo */
 .logo {
-  color: #ffc107;
-  font-weight: bold;
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 
+/* Imagen del logo: ajusta el tamaño real sin deformar */
+.form-logo3 {
+  height: 90px;      /* controla el alto del logo */
+  width: auto;       /* mantiene proporciones */
+  object-fit: contain;
+}
+
+/* Lista de enlaces */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  margin: 0;
+}
+
+/* Enlaces */
+/* Enlaces del menú */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 900;     /* un poco más gruesas */
+  font-size: 1.3rem;    /* 🔹 aumenta el tamaño (puedes subir a 1.2rem o 1.3rem) */
+  letter-spacing: 0.5px;/* un poco de espacio entre letras */
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffc107;
+}
+
+
+.nav-links a:hover {
+  color: #ffc107;
+}
+
+/* Contenedor del logo */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Imagen del logo */
+.form-logo3 {
+  width: 260px;       /* tamaño ancho sin deformar */
+  height: auto;       /* mantiene proporción */
+  object-fit: contain;/* sin deformación */
+  margin-left: -230px;  /* mueve más a la derecha */
+  margin-top: 5px;
+  margin-bottom: 5px; /* agrega espacio interno */
+}
+
+/* Enlaces de navegación */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
+  margin: 0;
 }
 
 .nav-links a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -79,6 +133,33 @@ html {
   color: #ffc107;
 }
 
+
+
+/* Contenedor del logo */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Enlaces de navegación */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffc107;
+}
 /* Contenedor principal - sección inicio */
 main.form-container {
    background-color: rgba(0, 0, 0, 0.100);
@@ -163,10 +244,13 @@ form button:hover {
   max-width: 400px;
   margin-bottom: 0.5rem;
 }
+/* Imagen del logo */
 .form-logo3 {
-  max-width: 130px;
-  margin-bottom: 0.5rem;
+  width: 660px;       /* 🔹 ajusta el ancho manualmente */
+  height: 300px;      /* 🔹 ajusta el alto manualmente */
+  object-fit: contain;/* mantiene las proporciones internas */
 }
+
 
 /* Sección Nosotros */
 .nosotros-section {
@@ -275,13 +359,97 @@ form button:hover {
 }
 
 
-/* Sección de contacto directo */
+/* 🔹 SECCIÓN DE CONTACTO AJUSTADA */
 .contacto-section {
-  padding: 3rem 2rem;
-  color: white;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  scroll-margin-top: 120px;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 1000px; /* 🔹 Espacio debajo de la barra de navegación */
 }
+
+/* 🔹 CONTENEDOR DEL FORMULARIO (fondo semitransparente) */
+.contacto-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  width: 90%;
+  max-width: 300px; /* 🔸 más pequeño */
+  background: rgba(0, 0, 0, 0.45); /* 🔹 fondo translúcido */
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid #ffc107;
+  backdrop-filter: blur(4px);
+}
+
+/* 🔹 TÍTULOS */
+.contacto-section h1 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: #ffcc00;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* 🔹 CAMPOS */
+.contacto-section input,
+.contacto-section textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ffc107;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.contacto-section input::placeholder,
+.contacto-section textarea::placeholder {
+  color: #ddd;
+}
+
+/* 🔹 BOTÓN */
+.contacto-section button {
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contacto-section button:hover {
+  background-color: #e0a800;
+}
+
+/* 🔹 RESPONSIVO */
+@media (max-height: 700px), (max-width: 768px) {
+  .contacto-section {
+    justify-content: flex-start;
+    padding-top: 2rem;
+    margin-top: 80px; /* 🔹 un poco menos de margen en pantallas pequeñas */
+  }
+
+  .contacto-section h1 {
+    font-size: 1rem;
+  }
+
+  .contacto-section form {
+    max-width: 90%;
+    padding: 0.8rem;
+  }
+}
+
 
 .contacto-section h2 {
   font-size: 2rem;
@@ -350,44 +518,93 @@ form button:hover {
 .btn-cta:hover {
   background-color: #e0a800;
 }
+/* 🎥 Fondo de videos — ajustable manualmente */
+/* --- Contenedor general del fondo --- */
 .video-background {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 150%;
+  height: 150%;
+  display: flex; /* distribuye los tres videos lado a lado */
   overflow: hidden;
   z-index: -1;
 }
 
+/* --- Cada video individual --- */
 .bg-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.45);
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 10s ease-in-out; /* 🔹 transición de 10 segundos */
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
 
+/* --- Proporciones de ancho --- */
+.video-izq {
+  width: 100%; /* video izquierdo */
+}
+
+.video-centro {
+  width: 100%; /* video central (más grande) */
+}
+
+.video-der {
+  width: 100%; /* video derecho */
+}
+
+/* 🔹 Videos principales (centrados y del mismo tamaño) */
+.bg-video {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  transform: translate(-50%, -50%) scale(1); /* 🔸 Ajusta el zoom del video */
+  width: 100%;      /* 🔸 puedes cambiarlo (ej: 120%) */
+  height: 100%;     /* 🔸 ajusta si se recorta */
+  object-fit: cover;/* mantiene la proporción */
+  opacity: 0;
+  transition: opacity 2s ease-in-out; /* transición entre videos */
+}
+
+/* 🔸 Video activo (el que se muestra) */
 .bg-video.active {
   opacity: 1;
 }
-/* 🔹 Este video llenará el espacio negro (a la derecha o izquierda) */
-.side-video {
-  position: absolute;
-  top: 50%;
-  left: 85%; /* Mueve más a la derecha */
-  transform: translate(-50%, -50%) scale(0.75);
-  min-width: 50%;
-  min-height: 100%;
-  object-fit: cover;
-  opacity: 1; /* Siempre visible */
-  z-index: -1;
+
+/* ===========================
+   🔧 CORRECCIÓN DE DESBORDAMIENTO Y ESPACIO BLANCO
+   =========================== */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Elimina espacio blanco lateral */
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100vw; /* Evita elementos más anchos que la pantalla */
+}
+
+
+
+/* Puedes modificar manualmente el tamaño si lo deseas */
+.bg-video {
+  transform: translate(-50%, -50%) scale(0.8); /* Cambia el valor para hacerlo más o menos grande */
+}
+
+/* 📱 Responsivo (se ajusta en móviles y tablets) */
+@media (max-width: 1024px) {
+  .bg-video,
+  .side-video {
+    transform: translate(-50%, -50%) scale(1.1); /* un poco más grande en tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .bg-video,
+  .side-video {
+    transform: translate(-50%, -50%) scale(1.3); /* llena bien la pantalla en móviles */
+  }
 }
 
 /* === Subcard general === */
@@ -527,18 +744,61 @@ body {
   justify-items: center;
 }
 
-/* 🔹 Ajuste responsivo */
+/* ==================== 🔹 RESPONSIVE 🔹 ==================== */
 @media (max-width: 1024px) {
-  .cards-container {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 2rem;
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .form-logo3 {
+    width: 220px;
+    margin-bottom: 1rem;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
+  .form-logo3 {
+    width: 180px;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
   .cards-container {
     grid-template-columns: 1fr;
-    padding: 1rem;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .form-logo3 {
+    width: 150px;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
   }
 }
 
