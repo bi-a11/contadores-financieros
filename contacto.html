@@ -29,20 +29,36 @@
   </ul>
 </header>
 
-  <!-- Sección de contacto -->
-  <section class="contacto-section" data-aos="fade-up">
-    <h1>Contáctanos Directamente</h1>
+<!-- Sección de contacto con botones -->
+<section class="contacto-section" data-aos="fade-up">
+  <h1>Contáctanos Directamente</h1>
 
-    <h2>GOMP.CONTADORES@OUTLOOK.COM</h2>
+ <!-- Botones de contacto -->
+<div class="contact-buttons">
 
-    
-    <ul class="contact-list">
-      <li><strong>CP. FERNANDO G.</strong> 5549245698</li>
-      <li><strong>CP. ALEJANDRO O.</strong> 5573281372</li>
-      <li><strong>CP. MIGUEL M.</strong> 5613019784</li>
-      <li><strong>CP. BRAYAN P.</strong> 5511243389</li>
-    </ul>
-  </section>
+  <!-- Botón de correo -->
+  <a href="https://mail.google.com/mail/?view=cm&to=GOMP.CONTADORES@OUTLOOK.COM" target="_blank" class="contact-btn correo-btn">
+    <img src="logos/icono de gmail.png" alt="Correo" class="icon-small">
+    GOMP.CONTADORES@OUTLOOK.COM
+  </a>
+
+  <!-- Botón de WhatsApp -->
+  <a href="https://wa.me/5573281372" target="_blank" class="contact-btn whatsapp-btn">
+    <img src="logos/sin fondo whats.jpg" alt="WhatsApp" class="icon-small">
+    Enviar WhatsApp
+  </a>
+
+</div>
+
+
+  <ul class="contact-list">
+    <li><strong>CP. FERNANDO G.</strong> 5549245698</li>
+    <li><strong>CP. ALEJANDRO O.</strong> 5573281372</li>
+    <li><strong>CP. MIGUEL M.</strong> 5613019784</li>
+    <li><strong>CP. BRAYAN P.</strong> 5511243389</li>
+  </ul>
+</section>
+
 
   <script>
     AOS.init();
@@ -125,20 +141,83 @@ strong {
   }
 }
 
+/* ===================== Sección de Contacto ===================== */
 .contacto-section h1 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #00c4ff;
+  color: #d0ff00;
 }
 
 .contact-list {
   list-style: none;
   font-size: 1.2rem;
   line-height: 2;
+  margin-bottom: 20px;
 }
 
 .contact-list li {
   margin-bottom: 10px;
 }
 
-</style>
+/* Iconos pequeños y alineación de items */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.contact-item img.icon-small {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Contenedor de botones */
+.contact-buttons {
+  display: flex;
+  gap: 1rem;        /* Espacio entre botones */
+  flex-wrap: wrap;  /* Que se adapten en pantallas pequeñas */
+  margin-top: 1rem;
+  margin-bottom: 20px;
+}
+
+/* ===================== Botones de Contacto ===================== */
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+
+.contact-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Botón de Gmail */
+.correo-btn {
+  background-color: #D44638;
+}
+
+.correo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+}
+
+/* Botón de WhatsApp */
+.whatsapp-btn {
+  background-color: #25D366;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+}

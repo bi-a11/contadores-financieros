@@ -40,9 +40,16 @@ form.addEventListener('submit', async (e) => {
     alert('Error al enviar mensaje: ' + error.message);
   }
 });
-  function toggleCard(card) {
-    card.classList.toggle('active');
-  }
+ function toggleSubcards(card) {
+  // Cierra otras cards si lo deseas
+  document.querySelectorAll(".card.card-orange").forEach(c => {
+    if (c !== card) c.classList.remove("active");
+  });
+
+  // Alterna la card seleccionada
+  card.classList.toggle("active");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const videos = document.querySelectorAll('.bg-video');
   let current = 0;
