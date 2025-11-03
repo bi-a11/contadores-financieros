@@ -19,11 +19,13 @@ html, body {
   top: 0; 
   left: 0; 
   width: 100%; 
-  z-index: 9999; 
   background-color: #000; 
   display: flex; 
   justify-content: space-between; 
   align-items: center; /* centra el contenido verticalmente */ 
+  padding: 1rem 3rem;
+  z-index: 1000; 
+  backdrop-filter: blur(5px);
   
   /* 🔹 Parámetros que puedes modificar manualmente */ 
   height: 125px; /* ajusta la altura total de la barra */ 
@@ -53,20 +55,19 @@ html, body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2.5rem;
-}
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 900;
-  font-size: 1.3rem;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease;
-}
-.nav-links a:hover {
-  color: #ffc107;
+  gap: 2rem;
 }
 
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #FFD700;
+}
 /* ===================== 🔹 HERO / SECCIÓN INICIO 🔹 ===================== */
 .hero-section {
   padding-top: 6rem;
@@ -104,30 +105,82 @@ html, body {
   background-color: #e0a800;
 }
 
-/* ===================== 🔹 VIDEO DE FONDO 🔹 ===================== */
+/* ===================== 🔹 VIDEOS DE FONDO BAJO NAVBAR 🔹 ===================== */
 .video-background {
   position: fixed;
-  top: 0;
+  top: 125px; /* 👈 altura exacta de tu navbar */
   left: 0;
-  width: 150%; /* ajustable */
-  height: 150%; /* ajustable */
+  width: 100vw;
+  height: calc(100vh - 125px); /* 👈 ocupa todo el espacio visible debajo */
   display: flex;
   overflow: hidden;
-  z-index: -1;
+  z-index: -1; /* detrás de todo el contenido */
+  background-color: #000;
 }
+
 .bg-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: 100%; /* puedes ajustar a 120% si quieres más cobertura */
-  height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
-}
-.bg-video.active {
+  width: 100%;
+  height: 100%;
   opacity: 1;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none; /* evita que interfiera con clics */
+}
+
+/* proporciones 30 / 40 / 30 */
+.bg-video.left { flex: 3; }
+.bg-video.center { flex: 4; }
+.bg-video.right { flex: 3; }
+
+/* 🔹 EFECTO SUAVE DE ESCALADO PARA MEJOR ADAPTACIÓN VISUAL */
+.bg-video:hover {
+  transform: scale(1.02);
+}
+
+/* 🔹 MODO RESPONSIVO — TABLETS Y CELULARES */
+@media (max-width: 1024px) {
+  .video-background {
+    flex-direction: column;
+    height: auto;
+    min-height: calc(100vh - 125px);
+  }
+
+  .bg-video {
+    flex: 1;
+    width: 100%;
+    height: 33.33vh;
+  }
+}
+
+/* 🔹 PARA PANTALLAS MUY PEQUEÑAS */
+@media (max-width: 600px) {
+  .bg-video {
+    height: 33.33vh;
+    object-fit: cover;
+  }
+}
+
+/* 🔹 SEGURIDAD VISUAL EN TELEVISORES Y ULTRA-WIDE */
+@media (min-aspect-ratio: 21/9) {
+  .bg-video {
+    object-position: center;
+  }
+}
+
+/* 🔹 En móviles se apilan los 3 videos */
+@media (max-width: 768px) {
+  .video-background {
+    flex-direction: column;
+    height: auto;
+    min-height: calc(100vh - 125px);
+  }
+  .bg-video.left,
+  .bg-video.center,
+  .bg-video.right {
+    flex: 1;
+    width: 100%;
+    height: 33.33vh;
+  }
 }
 
 /* ===================== 🔹 CARDS / TARJETAS ===================== */
@@ -167,7 +220,7 @@ html, body {
 }
 .card-orange p {
   font-size: 0.95rem;
-  color: #f0f0f0;
+  color: #000000;
   line-height: 1.5;
 }
 

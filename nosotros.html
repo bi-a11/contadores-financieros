@@ -6,28 +6,34 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<!-- Fondo de video e imágenes en toda la pantalla -->
+<!-- 🔹 VIDEOS DE FONDO EN 3 PARTES -->
 <div class="video-background">
-  <video src="logos/WhatsApp Video 2025-10-20 at 10.43.42 PM.mp4" autoplay muted loop class="bg-video.active"></video>
-  <video src="logos/WhatsApp Video 2025-10-20 at 10.45.32 PM.mp4" autoplay muted loop class="bg-video.active"></video>
-  <video src="logos/WhatsApp Video 2025-10-20 at 10.43.42 PM.mp4" autoplay muted loop class="bg-video.activo"></video>
+  <video class="bg-video left" autoplay muted loop playsinline>
+    <source src="logos/WhatsApp Video 2025-10-20 at 10.43.42 PM.mp4" type="video/mp4">
+  </video>
+  <video class="bg-video center" autoplay muted loop playsinline>
+    <source src="logos/WhatsApp Video 2025-10-20 at 10.45.32 PM.mp4" type="video/mp4">
+  </video>
+  <video class="bg-video right" autoplay muted loop playsinline>
+    <source src="logos/WhatsApp Video 2025-10-20 at 10.43.42 PM.mp4" type="video/mp4">
+  </video>
 </div>
  <!-- Menú de navegación -->
 <header class="navbar">
   <div class="logo">
     <img src="logos/blanco png.png" class="form-logo3" alt="Logo">
   </div>
- <ul class="nav-links">
-  <li><a href="index.html">INICIO</a></li>
-  <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
-  <li><a href="servicios.html">¿En qué te podemos ayudar?</a></li>
-  <li><a href="contacto.html">CONTACTO</a></li>
-</ul>
-
+  <ul class="nav-links">
+    <li><a href="index.html">INICIO</a></li>
+    <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
+    <li><a href="servicios.html">¿En qué te podemos ayudar?</a></li>
+   <li><a href="contacto.html">CONTACTO</a></li>
+  </ul>
 </header>
 <section id="inicio">
     <h1>G.O.M.P CONTADORES</h1>
@@ -151,6 +157,4 @@ body {
   max-width: 600px;
   margin: 0 auto;
 }
-
-
 </style>

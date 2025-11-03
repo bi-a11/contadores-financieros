@@ -8,38 +8,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
-// Envío del formulario
-const form = document.querySelector('form');
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-
-  const data = {
-    name: form.querySelector('input[type="text"]').value,
-    email: form.querySelector('input[type="email"]').value,
-    phone: form.querySelector('input[type="tel"]').value,
-    message: form.querySelector('textarea').value,
-  };
-
-  try {
-    const response = await fetch('http://localhost:5000/send-email', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
-
-    const result = await response.json();
-
-    if (response.ok) {
-      alert('Mensaje enviado con éxito');
-      form.reset();
-    } else {
-      alert('Error: ' + result.error);
-    }
-  } catch (error) {
-    alert('Error al enviar mensaje: ' + error.message);
-  }
-});
  function toggleSubcards(card) {
   // Cierra otras cards si lo deseas
   document.querySelectorAll(".card.card-orange").forEach(c => {
@@ -130,24 +99,3 @@ async function cargarVista(nombreVista) {
     lucide.createIcons();
   }, 300);
 }
-
-// Cargar vista por defecto al abrir la página
-window.onload = () => cargarVista('inicio');
-// Selecciona todos los videos del fondo
-const videos = document.querySelectorAll('.bg-video');
-let currentIndex = 0;
-
-// Cambia de video cada cierto tiempo
-function cambiarVideo() {
-  // Oculta el video actual
-  videos[currentIndex].classList.remove('active');
-
-  // Mueve al siguiente índice
-  currentIndex = (currentIndex + 1) % videos.length;
-
-  // Muestra el siguiente video
-  videos[currentIndex].classList.add('active');
-}
-
-// Cambia de video cada 15 segundos (puedes ajustar el tiempo)
-setInterval(cambiarVideo, 15000); // 15 segundos entre cambios
