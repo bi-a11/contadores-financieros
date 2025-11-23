@@ -28,133 +28,206 @@
   <div class="logo">
     <img src="logos/blanco png.png" class="form-logo3" alt="Logo">
   </div>
-  <ul class="nav-links">
+ <ul class="nav-links">
     <li><a href="index.html">INICIO</a></li>
     <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
-    <li><a href="servicios.html">¿En qué te podemos ayudar?</a></li>
+      <li><a href="servicios.html">SERVICIOS</a></li>
+    <li><a href="En que te podemos ayudar.html">¿EN QUE PODEMOS AYUDARTE?</a></li>
    <li><a href="contacto.html">CONTACTO</a></li>
   </ul>
 </header>
+<!-- ============================ SECCIÓN INICIO ============================ -->
 <section id="inicio">
-    <h1>G.O.M.P CONTADORES</h1>
-    <h1>
-       Somos una organización especializada en brindar servicios 
-       y asesoría en materia contable, fiscal, administrativa, legal, 
-       tributación e implantación de negocios de diversos sectores económicos.
-      </h1>
-      <h1>SOMOS ASESORES DEDICADOS, QUE ENTIENDEN TUS PROBLEMAS.</h1>
+  <h1>
+    En GOMP Contadores somos un despacho profesional dedicado a brindar servicios contables, fiscales y administrativos con ética, precisión y compromiso.
+    Apoyamos a personas físicas y empresas en el cumplimiento de sus obligaciones, ofreciendo soluciones personalizadas que impulsan su crecimiento y estabilidad financiera.
+    Nuestro equipo de contadores especializados trabaja con responsabilidad, confidencialidad y actualización constante para garantizar resultados confiables y oportunos.
+    En GOMP Contadores, convertimos la contabilidad en una herramienta estratégica al servicio de tu negocio.
+  </h1>
 
+  <div class="cards-container">
+    <div class="card card-orange" data-aos="fade-up" onclick="openModal('', 'Proporcionar servicios contables y fiscales de alta calidad, con un enfoque en la satisfacción del cliente y el cumplimiento de las normas y regulaciones.')">
+      <h3 class="titulo-card">MISIÓN</h3>
+    </div>
+  </div>
+  <div class="cards-container">
+    <div class="card card-orange" data-aos="fade-up" onclick="openModal('',' Ser el despacho contable líder en la región, reconocido por su excelencia en la prestación de servicios contables y fiscales.')">
+      <h3 class="titulo-card">VISIÓN</h3>
+    </div>
+  </div>
+  <div class="cards-container">
+    <div class="card card-orange" data-aos="fade-up" onclick="openModal('', 'Mantener un alto nivel de satisfacción del cliente, superando sus expectativas y necesidades.')">
+      <h3 class="titulo-card">OBJETIVO</h3>
+    </div>
+  </div>
+  <div class="cards-container">
+    <div class="card card-orange" data-aos="fade-up" onclick="openModal('', 'Los servicios de calidad que brindamos comprenden ética empresarial, integridad, profesionalismo responsabilidad, confidencialidad, respeto, compromiso y transparencia.')">
+      <h3 class="titulo-card">VALORES</h3>
+    </div>
+  </div>
 </section>
 
+<!-- ============================ MODAL ============================ -->
+<div id="definitionModal" class="modal-overlay">
+  <div class="modal-card">
+    <button class="close-btn" onclick="closeModal()">✕</button>
+    <div class="modal-background"></div>
+    <div class="modal-content-wrapper">
+      <h2 id="modalTitle"></h2>
+      <p id="modalContent"></p>
+    </div>
+  </div>
+</div>
+
 <script src="script.js"></script>
-<script>
-  AOS.init();
-</script>
+<script>AOS.init();</script>
 
-</body>
-</html>
 <style>
-  /* ====== SECCIÓN HERO ====== */
-.hero-section {
-  position: relative;
-  z-index: 1; /* Para que quede encima del video */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
-  color: white;
-  padding: 2rem;
-}
-
-/* ====== TARJETA CENTRAL ====== */
-.cards-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.card.card-orange {
-  background: rgba(255, 140, 0, 0.15);
-  border: 1px solid rgba(255, 140, 0, 0.4);
-  border-radius: 18px;
-  padding: 1.8rem;
-  width: 100%;
-  max-width: 360px;
-  min-height: 220px; /* 🔹 Tamaño uniforme */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: left;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 0 10px rgba(255, 140, 0, 0.15);
-}
-
-
-/* Efecto al pasar el mouse */
-.card.card-orange:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgb(235, 227, 227);
-}
-
-/* Quitar fondo negro del body */
+/* ============================ GENERAL ============================ */
 body {
   background: transparent;
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
+
+/* ============================ SECCIÓN INICIO ============================ */
 #inicio {
-  position: relative;
+  margin-left: 20%; /* 🔹 Mueve el modal más a la derecha */
   display: flex;
   flex-direction: column;
-  align-items: center; /* 🔹 Centra horizontalmente */
-  justify-content: center; /* 🔹 Centra verticalmente si hay altura fija */
+  align-items: center;
   text-align: center;
   z-index: 10;
 
-  /* 🔹 Espaciado */
-  margin-top: 180px; /* 🔹 Baja todo el contenido */
-  padding: 40px;
+  margin-top: 150px;
+  padding: 30px;
 
-  /* 🔹 Fondo transparente con ligero blur */
-  background: rgba(0, 0, 0, 0.562);
-  backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
   border-radius: 20px;
-  width: 80%;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 90%;
+  max-width: 900px;
 
-  /* 🔹 Borde dorado elegante */
   border: 1.5px solid rgba(255, 215, 0, 0.6);
   box-shadow: 0 0 30px rgba(255, 215, 0, 0.15);
 }
 
-/* 🔹 Logo */
-.hero-logo {
-  width: 220px;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6));
-}
-
-/* 🔹 Título */
 #inicio h1 {
   color: #FFD700;
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
-/* 🔹 Texto */
-#inicio p {
+/* ============================ CARDS ============================ */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.card-orange {
+  width: 240px;
+  height: 240px;
+  background: rgba(255, 140, 0, 0.15);
+  border: 2px solid rgba(255, 140, 0, 0.5);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 10px rgba(255, 140, 0, 0.15);
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.card-orange:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
+}
+
+.titulo-card {
+    color: rgb(13, 13, 14) !important;
+    font-weight: bold;
+    text-shadow:
+        -1px -1px 0 orange,
+         1px -1px 0 orange,
+        -1px  1px 0 orange,
+         1px  1px 0 orange;
+}
+
+/* ============================ MODAL ============================ */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-card {
+  background: rgba(0, 0, 0, 0.85);
   color: white;
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+  border: 1px solid orange;
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+}
+
+.modal-card h2,
+.modal-card p {
+  color: white !important;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* ============================ RESPONSIVE ============================ */
+@media (max-width: 768px) {
+  #inicio h1 {
+    font-size: 1.3rem;
+  }
+
+  .card-orange {
+    width: 180px;
+    height: 180px;
+  }
+
+  .titulo-card {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-orange {
+    width: 150px;
+    height: 150px;
+  }
+
+  .titulo-card {
+    font-size: 1rem;
+  }
 }
 </style>

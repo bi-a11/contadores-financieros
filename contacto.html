@@ -27,10 +27,11 @@
   <div class="logo">
     <img src="logos/blanco png.png" class="form-logo3" alt="Logo">
   </div>
-  <ul class="nav-links">
+ <ul class="nav-links">
     <li><a href="index.html">INICIO</a></li>
     <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
-    <li><a href="servicios.html">¿En qué te podemos ayudar?</a></li>
+      <li><a href="servicios.html">SERVICIOS</a></li>
+    <li><a href="En que te podemos ayudar.html">¿EN QUE PODEMOS AYUDARTE?</a></li>
    <li><a href="contacto.html">CONTACTO</a></li>
   </ul>
 </header>
@@ -74,43 +75,32 @@
 </body>
 </html>
 <style>
-/* ====== SECCIÓN DE CONTACTO FLOTANTE ====== */
+/* ====== SECCIÓN DE CONTACTO FIJA Y CENTRADA ====== */
 .contacto-section {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: fixed;              /* Se mantiene en el centro aunque hagas scroll */
+  left: 35%;                    /* Centro horizontal */
+  transform: translate(-40%, -40%); /* Ajuste exacto al centro */
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
   padding: 40px 60px;
   border-radius: 20px;
   width: 80%;
   max-width: 600px;
-  z-index: 10;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-
-  /* 🔹 Animación de movimiento */
-  animation: movimientoLento 10s infinite alternate ease-in-out;
+  z-index: 800;                 /* Encima de todo */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+  backdrop-filter: blur(5px);    /* Efecto elegante opcional */
+  background: rgba(0, 0, 0, 0.562);
+  border: 1.5px solid rgba(255, 215, 0, 0.6);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  text-align: center;
 }
 
-/* ====== ANIMACIÓN ====== */
-@keyframes movimientoLento {
-  0% {
-    transform: translate(-50%, -50%) translate(0px, 0px);
-  }
-  25% {
-    transform: translate(-50%, -50%) translate(40px, -30px);
-  }
-  50% {
-    transform: translate(-50%, -50%) translate(-30px, 40px);
-  }
-  75% {
-    transform: translate(-50%, -50%) translate(50px, 30px);
-  }
-  100% {
-    transform: translate(-50%, -50%) translate(-40px, -20px);
-  }
-}
+
+
+
 
 /* ===================== Sección de Contacto ===================== */
 .contacto-section h1 {
@@ -164,7 +154,7 @@
   font-weight: bold;
   color: white;
   text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 6px rgba(192, 177, 177, 0.541);
   transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
 }
 

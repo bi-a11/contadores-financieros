@@ -1,0 +1,321 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- AOS Animations -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- 🔹 VIDEOS DE FONDO EN 3 PARTES -->
+<div class="video-background">
+  <video class="bg-video left" autoplay muted loop playsinline>
+    <source src="logos/WhatsApp Video 2025-10-20 at 10.43.42 PM.mp4" type="video/mp4">
+  </video>
+  <video class="bg-video center" autoplay muted loop playsinline>
+    <source src="logos/WhatsApp Video 2025-10-20 at 10.45.32 PM.mp4" type="video/mp4">
+  </video>
+  <video class="bg-video right" autoplay muted loop playsinline>
+    <source src="logos/WhatsApp Video 2025-10-20 at 10.43.42 PM.mp4" type="video/mp4">
+  </video>
+</div>
+ <!-- Menú de navegación -->
+<header class="navbar">
+  <div class="logo">
+    <img src="logos/blanco png.png" class="form-logo3" alt="Logo">
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">INICIO</a></li>
+    <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
+      <li><a href="servicios.html">SERVICIOS</a></li>
+    <li><a href="En que te podemos ayudar.html">¿EN QUE PODEMOS AYUDARTE?</a></li>
+   <li><a href="contacto.html">CONTACTO</a></li>
+  </ul>
+</header>
+<section class="contenedor">
+  
+  <!-- IZQUIERDA -->
+  <div class="columna izquierda">
+    <h1 class="contacto-section">
+      Contamos con la experiencia para brindarles servicios especializados en materia contable, fiscal y asesoría en negocios.
+    </h1>
+  </div>
+
+  <!-- CENTRO: CARD -->
+  <div class="columna centro">
+    <div class="cards-container">
+      <div class="card card-orange"
+        data-aos="fade-up"
+        onclick="openModal(
+          '',
+          `✅ Cumplimiento puntual — Evitas multas y recargos.<br>
+           ✅ Seguridad en tus declaraciones — Datos protegidos y cálculos revisados por expertos.<br>
+           ✅ Ahorro de tiempo — Nos encargamos de todo el proceso ante el SAT.<br>
+           ✅ Asesoría clara y confiable — Te explicamos lo necesario, sin tecnicismos.<br>
+           ✅ Soporte continuo todo el año — Atención durante todo el año fiscal.`
+        )">
+        <i data-lucide="briefcase"></i>
+        <h3 class="titulo-card">BENEFICIOS DE CONTRATARNOS</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- DERECHA: FORMULARIO -->
+  <div class="columna derecha">
+    <div class="hero-form">
+      <h1>LLENA TODOS LOS CAMPOS</h1>
+      <form id="contactForm">
+        <input type="text" id="from_name" placeholder="Nombre completo" required />
+        <input type="email" id="from_email" placeholder="Correo electrónico" required />
+        <input type="tel" id="phone" placeholder="Teléfono" required />
+        <textarea id="message" placeholder="¿Cuál es tu problema o necesidad?" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <p id="statusMessage"></p>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- 🔹 MODAL GLOBAL -->
+<div id="definitionModal" class="modal-overlay">
+  <div class="modal-card">
+    <button class="close-btn" onclick="closeModal()">✕</button>
+    <div class="modal-background"></div>
+    <div class="modal-content-wrapper">
+      <h2 id="modalTitle"></h2>
+      <p id="modalContent"></p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
+<style>
+  
+ /* ====== ESTILOS GLOBALES ====== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background: transparent;
+  overflow-x: hidden;
+}
+.contacto-section {
+  color: #d7ee0d;
+  font-weight: 800;
+  font-size: 2rem;
+  text-shadow: 
+    3px 3px 8px rgba(0, 0, 0, 0.9),   /* sombra principal */
+    0 0 10px rgb(14, 12, 12); /* brillo suave */
+}
+
+/* Contenedor principal con 3 columnas */
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* antes: center */
+  padding-top: 7rem;
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* Cada columna se distribuye en partes iguales */
+.columna {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IZQUIERDA */
+.izquierda {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 2rem;
+
+  margin-top: -120px; /* AJUSTA EL VALOR HASTA QUE TE GUSTE */
+}
+
+
+/* CENTRO */
+.centro {
+  display: flex;
+  justify-content: center; /* card centrada */
+
+  
+  margin-top: 100px; /* AJUSTA EL VALOR HASTA QUE TE GUSTE */
+}
+
+/* DERECHA */
+.derecha {
+  display: flex;
+  justify-content: center;
+  padding-right: 2rem;
+  
+  margin-top: 25px; /* AJUSTA EL VALOR HASTA QUE TE GUSTE */
+}
+
+/* ====== FORMULARIO ====== */
+.hero-form {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1.5px solid rgba(255, 215, 0, 0.6);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-form h2 {
+  color: #FFD700;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.hero-form input,
+.hero-form textarea,
+.hero-form button {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.hero-form input,
+.hero-form textarea {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.hero-form button {
+  background: linear-gradient(90deg, #FFD700, #ff9800);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+/* ====== HERO HALF DERECHO ====== */
+.hero-half {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* empieza desde arriba */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* ====== CONTENEDOR DE LAS CARDS ====== */
+.right-content {
+  flex: 1 1 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 tarjetas por fila */
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+}
+.titulo-card {
+    color: rgb(13, 13, 14) !important;
+    font-weight: bold;
+    text-shadow:
+        -1px -1px 0 orange,
+         1px -1px 0 orange,
+        -1px  1px 0 orange,
+         1px  1px 0 orange;
+}
+/* ====== CARDS ====== */
+.card-orange {
+  background: rgba(255, 140, 0, 0.15);
+  border: 1px solid rgb(238, 255, 3);
+  border-radius: 18px;
+  padding: 1.8rem;
+  width: 100%;
+  max-width: 340px;
+
+  /* CENTRADO */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 10px rgb(191, 233, 5);
+}
+
+.card-orange i {
+  font-size: 40px; /* opcional para mayor estética */
+  margin-bottom: 12px;
+}
+
+.card-orange h3 {
+  margin: 0;
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 por fila en tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr; /* 1 por fila en móviles */
+  }
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 1024px) {
+  .hero-section {
+    flex-direction: column;
+    padding-top: 8rem;
+  }
+  .hero-half {
+    flex: 1 1 100%;
+    padding: 1.5rem;
+  }
+  .hero-form,
+  .card-orange {
+    max-width: 90%;
+  }
+}
+.card-orange[style*="background-image"] {
+  background-size: cover;         /* la imagen cubre toda la card */
+  background-position: center;    /* centrada */
+  background-repeat: no-repeat;   /* no se repite */
+  background-blend-mode: overlay; /* mezcla leve con color para legibilidad */
+  color: white;                   /* asegura contraste del texto */
+}
+
+</style>

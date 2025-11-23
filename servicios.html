@@ -28,53 +28,19 @@
   <div class="logo">
     <img src="logos/blanco png.png" class="form-logo3" alt="Logo">
   </div>
-  <ul class="nav-links">
+   <ul class="nav-links">
     <li><a href="index.html">INICIO</a></li>
     <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
-    <li><a href="servicios.html">¿En qué te podemos ayudar?</a></li>
+      <li><a href="servicios.html">SERVICIOS</a></li>
+    <li><a href="En que te podemos ayudar.html">¿EN QUE PODEMOS AYUDARTE?</a></li>
    <li><a href="contacto.html">CONTACTO</a></li>
   </ul>
 </header>
-<section class="contenedor">
    <div class="columna">
     <div class="hero-form">
-    <h1 class="contacto-section">
-      Contamos con la experiencia para brindarles servicios especializados en materia contable, fiscal y asesoría en negocios.
-    
-     <div class="cards-container">
-     <div class="card card-orange"
-       data-aos="fade-up" 
-       onclick="openModal(
-         '',
-         `✅ Cumplimiento puntual — Evitas multas y recargos.<br>
-         ✅ Seguridad en tus declaraciones — Datos protegidos y cálculos revisados por expertos.<br>
-         ✅ Ahorro de tiempo — Nos encargamos de todo el proceso ante el SAT.<br>
-         ✅ Asesoría clara y confiable — Te explicamos lo necesario, sin tecnicismos.<br>
-         ✅ Soporte continuo todo el año — Atención durante todo el año fiscal.`
-       )">
-       
-      <i data-lucide="briefcase"></i>
-      <h3>BENEFICIOS DE CONTRATARNOS</h3>
-    </div>
-    </div>
-     
-    <div class="formulario" >
-  <h1>LLENA TODOS LOS CAMPOS</h1>
-  <form id="contactForm">
-        <input type="text" id="from_name" placeholder="Nombre completo" required /><br>
-        <input type="email" id="from_email" placeholder="Correo electrónico" required /><br>
-        <input type="tel" id="phone" placeholder="Teléfono" required /><br>
-        <textarea id="message" placeholder="¿Cuál es tu problema o necesidad?" rows="4" required></textarea><br>
-        <button type="submit">Enviar</button>
-    </form>
-    
-      <p id="statusMessage"></p>
-    </h1>
-    </div>
-    </div>
   <div class="columna">
     <div class="cards-container">
-  <div class="card card-orange" data-aos="zoom-in-up" data-aos-delay="500" onclick="openModal('SERVICIOS DE CONTABILIDAD', `
+  <div class="card card-orange" style="background-image: url('logos/SERVICIOS\ DE\ CONTABILIDAD.jpg')" data-aos="zoom-in-up" data-aos-delay="500" onclick="openModal('SERVICIOS DE CONTABILIDAD', `
 Con Consultoría Contable y Fiscal, finalmente puedes comenzar a concentrarte en hacer crecer tu propio negocio mientras tienes la tranquilidad de que todos tus asuntos contables están en orden.<br><br>
 Estos informes son esenciales para la toma de decisiones por parte de propietarios, inversionistas, bancos y entidades reguladoras.<br><br>
 Cumplimiento de normas contables locales o internacionales (como las NIIF/IFRS).<br>
@@ -83,10 +49,9 @@ Mantén una imagen clara, confiable y ordenada de la situación financiera de la
   `)">
   <i data-lucide="briefcase"></i>
     <h3>SERVICIOS DE CONTABILIDAD</h3>
-    <p class="card-content">Gestión completa de registros contables, reportes financieros y cumplimiento normativo.</p>
   </div>
 
-  <div class="card card-orange" data-aos="fade-up" onclick="openModal('SERVICIOS DE ASESORÍA FISCAL', `
+  <div class="card card-orange" style="background-image: url('logos/asesoria\ fiscal.jpg')" data-aos="fade-up" onclick="openModal('SERVICIOS DE ASESORÍA FISCAL', `
 Ofrecemos asesoría fiscal para empresas y personas físicas, ayudándolos a cumplir con sus obligaciones fiscales y a minimizar sus impuestos.<br><br>
 Nuestro equipo de expertos fiscales se encarga de la planificación fiscal y la preparación de declaraciones de impuestos.<br><br>
 
@@ -112,10 +77,9 @@ Configuración de obligaciones del negocio.<br><br>
 Aseguramos que el contribuyente cumpla con la ley, pague solo lo justo y aproveche todos los beneficios fiscales disponibles dentro del marco legal.
   `)">
     <h3>SERVICIOS DE ASESORÍA FISCAL</h3>
-    <p>Planeación fiscal, cumplimiento tributario y estrategias de optimización legal.</p>
   </div>
 
-  <div class="card card-orange" style="background-image: url('logos/Imagen3.png');" data-aos="fade-up" onclick="openModal('SERVICIOS DE AUDITORÍA', `
+  <div class="card card-orange" style="background-image: url('logos/Imagen3.png')" data-aos="fade-up" onclick="openModal('SERVICIOS DE AUDITORÍA', `
 Auditorías financieras y operativas para evaluar la situación financiera y el cumplimiento de normas y regulaciones.<br><br>
 <strong>Objetivo:</strong><br>
 Aportar transparencia, confianza y seguridad a la información financiera y operativa.<br>
@@ -139,7 +103,6 @@ Optimización de operaciones y toma de decisiones estratégicas.<br><br>
 Verificación del cumplimiento de leyes, políticas internas y normativas externas (laborales, ambientales, de calidad, etc.).
   `)">
     <h3>SERVICIOS DE AUDITORÍA</h3>
-    <p>Evaluación integral de cumplimiento financiero, fiscal y operativo.</p>
   </div>
 
   <div class="card card-orange" style="background-image: url('logos/Imagen2.png');" data-aos="fade-up" onclick="openModal('ENVÍO DE DECLARACIONES DE IMPUESTOS ANTE EL SAT', `
@@ -157,10 +120,9 @@ Emprendedores, arrendadores, PyMEs y comerciantes.<br>
 Conductores de plataformas digitales, entre otros.
   `)">
     <h3>ENVÍO DE DECLARACIONES</h3>
-    <p>Declaraciones mensuales y anuales ante el SAT con cumplimiento total.</p>
   </div>
 
-  <div class="card card-orange" data-aos="fade-up" onclick="openModal('ATENCIÓN A REQUERIMIENTOS', `
+  <div class="card card-orange" style="background-image: url('logos/ATENCION\ A\ REQUERIMIENTOS.jpg')" data-aos="fade-up" onclick="openModal('ATENCIÓN A REQUERIMIENTOS', `
 ¿Recibiste un requerimiento del SAT?<br>
 Confiar en especialistas hace la diferencia. Nuestro equipo de expertos se encargará de resolverlo rápidamente y con exactitud.<br><br>
 <strong>Revisamos:</strong><br>
@@ -178,10 +140,9 @@ Confiar en especialistas hace la diferencia. Nuestro equipo de expertos se encar
 ⚠️ ¡No ignores un requerimiento del SAT!
   `)">
     <h3>ATENCIÓN A REQUERIMIENTOS</h3>
-    <p>Resolución profesional de requerimientos y notificaciones del SAT.</p>
   </div>
 
-  <div class="card card-orange" data-aos="fade-up" onclick="openModal('RECUPERACIÓN DE SALDOS A FAVOR', `
+  <div class="card card-orange" style="background-image: url('logos/RECUPERACION\ DE\ SALDOS\ A\ FAV.jpg')" data-aos="fade-up" onclick="openModal('RECUPERACIÓN DE SALDOS A FAVOR', `
 Las leyes fiscales permiten la devolución de ISR de hasta cinco años atrás.<br>
 Te ayudamos a recuperar tu dinero ante el SAT de forma legal, segura y sin complicaciones.<br><br>
 <strong>Incluye:</strong><br>
@@ -191,10 +152,9 @@ Te ayudamos a recuperar tu dinero ante el SAT de forma legal, segura y sin compl
 4️⃣ Solicitudes de corrección o reconsideración.
   `)">
     <h3>RECUPERACIÓN DE SALDOS A FAVOR</h3>
-    <p>Trámite completo de devolución de ISR o IVA ante el SAT.</p>
   </div>
 
-  <div class="card card-orange" data-aos="fade-up" onclick="openModal('REGISTROS ANTE IMSS, INFONAVIT, REPSE, ETC.', `
+  <div class="card card-orange" style="background-image: url('logos/Imagen1.png');" data-aos="fade-up" onclick="openModal('REGISTROS ANTE IMSS, INFONAVIT, REPSE, ETC.', `
 Gestionamos el registro completo de tu empresa ante IMSS, INFONAVIT, REPSE, STPS e ISSSTE.<br><br>
 <strong>Incluye:</strong><br>
 - Diagnóstico inicial de obligaciones.<br>
@@ -204,10 +164,9 @@ Gestionamos el registro completo de tu empresa ante IMSS, INFONAVIT, REPSE, STPS
 Cumple con la ley y protege a tus colaboradores.
   `)">
     <h3>REGISTROS ANTE IMSS / INFONAVIT / REPSE</h3>
-    <p>Tramitación integral ante instituciones laborales y de seguridad social.</p>
   </div>
 
-  <div class="card card-orange" style="background-image: url('logos/Imagen1.png');" data-aos="fade-up" onclick="openModal('FACTURACIÓN ELECTRÓNICA', `
+  <div class="card card-orange" style="background-image: url('logos/ChatGPT\ Image\ 22\ nov\ 2025\,\ 09_56_10\ p.m..png')" data-aos="fade-up" onclick="openModal('FACTURACIÓN ELECTRÓNICA', `
 Emitimos y enviamos tus facturas CFDI 4.0 de forma legal y sin errores.<br><br>
 <strong>Incluye:</strong><br>
 ✅ Emisión de facturas de ingresos, egresos, pagos y nómina.<br>
@@ -219,10 +178,8 @@ Emitimos y enviamos tus facturas CFDI 4.0 de forma legal y sin errores.<br><br>
 ✅ Cumplimiento con CFDI 4.0 y atención personalizada.
   `)">
     <h3>FACTURACIÓN ELECTRÓNICA</h3>
-    <p>Emisión, validación y administración de CFDI conforme a la normativa actual.</p>
   </div>
-    </div>
-</section>
+
 
 <!-- 🔹 MODAL GLOBAL -->
 <div id="definitionModal" class="modal-overlay">
@@ -253,187 +210,144 @@ body {
   overflow-x: hidden;
 }
 
-/* Contenedor principal */
+/* Efecto 3D en textos */
+.text-3d {
+  font-weight: bold;
+  color: #131212;
+  text-shadow:
+    1px 1px 0px #000,
+    2px 2px 0px #fffbfb,
+    3px 3px 0px #ffffff;
+}
+
+/* CONTENEDOR PRINCIPAL */
 .contenedor {
   display: flex;
   width: 100%;
-  min-height: 100vh; /* ✅ en lugar de height */
-  height: auto;      /* permite crecer según el contenido */
+  min-height: 100vh;
 }
 
-/* Columnas individuales */
+/* COLUMNAS */
 .columna {
   flex: 1;
-  width: 100%;
-  padding-top: 7rem; /* ✅ mucho más estable */
+  padding-top: 3rem;
 }
 
-
-.hero-half, .cards-container {
-  height: auto;        /* permite crecer según el contenido */
-  overflow: visible;   /* no recorta las cards */
-}
-
-
-/* ====== FORMULARIO ====== */
-.hero-form {
-  background: rgba(0, 0, 0, 0.6);
-  border: 1.5px solid rgba(255, 215, 0, 0.6);
-  border-radius: 18px;
-  box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
-  width: 100%;
-  max-width: 420px;
-  padding: 2rem;
-  text-align: center;
-}
-
-.hero-form h2 {
-  color: #FFD700;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
-}
-
-.hero-form input,
-.hero-form textarea,
-.hero-form button {
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.8rem;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-}
-
-.hero-form input,
-.hero-form textarea {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-}
-
-.hero-form button {
-  background: linear-gradient(90deg, #FFD700, #ff9800);
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.hero-form button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
-}
-
-/* ====== HERO HALF DERECHO ====== */
-.hero-half {
-  flex: 1 1 50%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* empieza desde arriba */
-  padding: 2rem;
-  box-sizing: border-box;
-}
-
-/* ====== CONTENEDOR DE LAS CARDS ====== */
+/* ====== CONTENEDOR DE CARDS (ALINEADO A LA DERECHA) ====== */
 .right-content {
-  flex: 1 1 60%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  padding-right: 3rem;
 }
 
+/* Contenedor de cards */
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 tarjetas por fila */
-  gap: 1.5rem;
-  width: 100%;
-  max-width: 900px;
+  grid-template-columns: repeat(3, 1fr); /* 4 columnas */
+  gap: 1rem; /* 🔹 Más juntas */
+  justify-content: center; /* Centra todo el grid */
+}
+/* Texto negro en títulos */
+.cards-container h3 {
+    color: rgb(13, 13, 14) !important;
+    font-weight: bold;
+    text-shadow:
+        -1px -1px 0 orange,
+         1px -1px 0 orange,
+        -1px  1px 0 orange,
+         1px  1px 0 orange;
 }
 
-/* ====== CARDS ====== */
+/* ====== DISEÑO DE CARDS ====== */
 .card-orange {
+  height: 200px;
+  width: 200px;
+
   background: rgba(255, 140, 0, 0.15);
   border: 1px solid rgba(255, 140, 0, 0.4);
   border-radius: 18px;
-  padding: 1.8rem;
-  width: 100%;
-  max-width: 340px;
-  text-align: left;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1.2rem;
+  text-align: center;
+
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(6px);
   box-shadow: 0 0 10px rgba(255, 140, 0, 0.15);
+
+  position: relative; /* 🔥 necesario para título */
+  overflow: hidden;
 }
 
 .card-orange:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  box-shadow: 0 0 20px rgba(5, 4, 1, 0.5);
+}
+
+/* ====== TÍTULO CENTRADO CON EFECTO 3D ====== */
+.card-orange .titulo-card {
+  position: absolute;
+  bottom: 10px;               /* 🔥 se coloca abajo, puedes moverlo */
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: rgba(0, 0, 0, 0.8);   /* 🔥 fondo negro */
+  padding: 5px 12px;
+  border: 2px solid white;         /* 🔥 borde blanco efecto 3D */
+  border-radius: 8px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  text-shadow:
+    1px 1px 0px #000,
+    2px 2px 0px #444;
+
+  backdrop-filter: blur(3px);
+  z-index: 2;
+}
+
+/* Todas las cards del mismo tamaño */
+.card {
+  width: 260px; /* 📌 Ajusta si quieres más grande o más pequeño */
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* Fondo con imagen */
+.card-orange[style*="background-image"] {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  color: white;
 }
 
 /* ====== RESPONSIVO ====== */
 @media (max-width: 1024px) {
   .cards-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 por fila en tablets */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .right-content {
+    justify-content: center; /* En tablets se centra */
+    padding-right: 0;
   }
 }
 
 @media (max-width: 768px) {
   .cards-container {
-    grid-template-columns: 1fr; /* 1 por fila en móviles */
+    grid-template-columns: 1fr;
   }
-}
-
-/* ====== RESPONSIVO ====== */
-@media (max-width: 1024px) {
-  .hero-section {
-    flex-direction: column;
-    padding-top: 8rem;
-  }
-  .hero-half {
-    flex: 1 1 100%;
-    padding: 1.5rem;
-  }
-  .hero-form,
-  .card-orange {
-    max-width: 90%;
-  }
-}
-.card-orange[style*="background-image"] {
-  background-size: cover;         /* la imagen cubre toda la card */
-  background-position: center;    /* centrada */
-  background-repeat: no-repeat;   /* no se repite */
-  background-blend-mode: overlay; /* mezcla leve con color para legibilidad */
-  color: white;                   /* asegura contraste del texto */
 }
 
 </style>
-    <!-- EmailJS SDK -->
-    <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
-<script>
-// Inicializar EmailJS con tu User ID
-        emailjs.init("BSNB2KIEvnw4HZEPM"); // <-- reemplaza con tu API Key
-
-        const form = document.getElementById("contactForm");
-        const statusMessage = document.getElementById("statusMessage");
-
-        form.addEventListener("submit", function(e) {
-            e.preventDefault();
-
-            const templateParams = {
-                from_name: document.getElementById("from_name").value,
-                from_email: document.getElementById("from_email").value,
-                phone: document.getElementById("phone").value,
-                message: document.getElementById("message").value
-            };
-
-            emailjs.send("service_ejwysnk", "template_gqqc12k", templateParams)
-                .then(function(response) {
-                    statusMessage.textContent = "Correo enviado con éxito!";
-                    statusMessage.className = "success";
-                    form.reset();
-                }, function(error) {
-                    statusMessage.textContent = "Error al enviar correo: " + JSON.stringify(error);
-                    statusMessage.className = "error";
-                });
-        });
-</script>
